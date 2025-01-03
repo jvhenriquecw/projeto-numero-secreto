@@ -23,9 +23,6 @@ function sortear() {
 
     while (sorteados.includes(numero)) {
         numero = numeroAleatorio(de, ate);
-        if (quantidade > (ate - de + 1)) {
-
-        }
     }
 
     sorteados.push(numero);
@@ -43,7 +40,7 @@ function numeroAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function reiniciarJogo() {
+function terminoDeJogo() {
     let botaoReiniciar = document.getElementById('btn-reiniciar');
 
     if (botaoReiniciar.classList.contains('container__botao-desabilitado')) {
