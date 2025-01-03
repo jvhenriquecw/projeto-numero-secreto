@@ -33,7 +33,7 @@ function sortear() {
    let resultado = document.getElementById('resultado');
    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados:  ${sorteados.join(', ')}</label>`;
 
-   reiniciarJogo();
+   terminoDeJogo();
 }
 
 function numeroAleatorio(min, max) {
