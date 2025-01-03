@@ -57,3 +57,12 @@ function reiniciarJogo() {
     }
 }
 
+function reiniciar() {
+    let quantidade = parseInt(document.getElementById('quantidade').value = '');
+    let de = parseInt(document.getElementById('de').value = '');
+    let ate = parseInt(document.getElementById('ate').value = '');
+
+    let botaoReiniciar = document.getElementById('btn-reiniciar');
+    botaoReiniciar.classList.remove('container__botao');
+    botaoReiniciar.classList.add('container__botao-desabilitado');
+}
