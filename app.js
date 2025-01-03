@@ -3,6 +3,18 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    if (de >= ate) {
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<label class="texto_paragrafo">O número do campo "Do número" deve ser menor que o número do campo "Até o número"</label>';
+        return;
+     }
+    
+     if (quantidade > (ate - de + 1)) {
+        let resultado = document.getElementById('resultado');
+        resultado.innerHTML = '<label class="texto_paragrafo">O campo "Quantidade" deve ser menor ou igual a quantidade de números do campo "Do número" e "Até o número"</label>';
+        return;
+     }
+
    let sorteados = [];
    let numero;
 
@@ -11,6 +23,9 @@ function sortear() {
 
     while (sorteados.includes(numero)) {
         numero = numeroAleatorio(de, ate);
+        if (quantidade > (ate - de + 1)) {
+
+        }
     }
 
     sorteados.push(numero);
@@ -29,7 +44,7 @@ function numeroAleatorio(min, max) {
 function reiniciarJogo() {
     let botaoReiniciar = document.getElementById('btn-reiniciar');
 
-    if (botaoReiniciar.classList.includes('container__botao-desabilitado')) {
+    if (botaoReiniciar.classList.contains('container__botao-desabilitado')) {
 
         botaoReiniciar.classList.remove('container__botao-desabilitado');
 
